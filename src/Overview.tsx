@@ -69,7 +69,7 @@ export function OverviewComponent() {
   const walletTableSource = Object.entries(investmentsByType ?? {}).map(
     ([key, value]) => ({
       key: key,
-      name: key,
+      type: key,
       participacao: formatPercentage(
         (value?.reduce((acc, val) => acc + val.Value, 0) ?? 0) /
           (summary?.TotalValue ?? 1)
@@ -80,9 +80,9 @@ export function OverviewComponent() {
 
   const walletTablecolumns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
+      title: "Type",
+      dataIndex: "type",
+      key: "type",
     },
     {
       title: "Participação",
@@ -105,28 +105,28 @@ export function OverviewComponent() {
       <section className="CardSection">
         <Card title="My Summary" className="OverviewCard SummaryCard">
           <Statistic
-            title="Patrimonio Total"
+            title="Net Worth"
             value={summary!.TotalValue}
             precision={2}
             prefix={"R$"}
           />
           <Divider className="Divider" />
           <Statistic
-            title="Patrimonio Investido"
+            title="Invested"
             value={summary!.TotalInvestedValue}
             precision={2}
             prefix={"R$"}
           />
           <Divider className="Divider" />
           <Statistic
-            title="Ganho no mês"
+            title="Gain in month"
             value={summary!.MonthGain}
             precision={2}
             prefix={"R$"}
           />
           <Divider className="Divider" />
           <Statistic
-            title="Rentabilidade no mês"
+            title="Profitability in month"
             value={(summary!.MonthGain / summary!.TotalValue) * 100}
             precision={2}
             suffix={"%"}
@@ -173,27 +173,6 @@ export function OverviewComponent() {
           </div>
         </Card>
       </section>
-      {/* <section className="CardSection">
-        <Card title="My Wallet2" className="OverviewCard WalletCard">
-          <div className="WalletWrapper">
-            <div className="WalletChart">
-              <Doughnut
-                data={walletChart2}
-                options={{
-                  responsive: true,
-                  maintainAspectRatio: false,
-                  legend: {
-                    onClick: (e) => e.stopPropagation(),
-                  },
-                }}
-              />
-            </div>
-            <div className="WalletTable">
-              <Table dataSource={walletTableSource2} columns={walletTablecolumns} />
-            </div>
-          </div>
-        </Card>
-      </section> */}
     </div>
   );
 }
