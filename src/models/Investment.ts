@@ -1,4 +1,4 @@
-import { InvestmentType } from "./InvestmentType";
+import { InvestmentType } from './InvestmentType';
 
 export interface Investment {
   /**

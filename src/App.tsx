@@ -1,8 +1,8 @@
-import React from "react";
-import { OverviewComponent } from "./Overview";
-import { Menu } from "antd";
-import "./App.scss";
-import Logo from "./assets/logo.svg";
+import React from 'react';
+import { OverviewComponent } from './Overview';
+import { Menu } from 'antd';
+import './App.scss';
+import Logo from './assets/logo.svg';
 
 function App() {
   return (
@@ -22,9 +22,7 @@ function App() {
           <OverviewComponent />
         </main>
         <footer id="MainFooter">
-          <div>
-            InvestmentHub ©{new Date().getFullYear()}
-          </div>
+          <div>InvestmentHub ©{new Date().getFullYear()}</div>
         </footer>
       </section>
     </section>

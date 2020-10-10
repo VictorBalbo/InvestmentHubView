@@ -1,0 +1,5 @@
+// Valores do dia
+http://bvmf.bmfbovespa.com.br/cotacoes2000/FormConsultaCotacoes.asp?strListaCodigos=XPML11
+
+// Dados historicos
+https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=RBVA11.SA&outputsize=full&apikey=8KLMOELVX952ECYC

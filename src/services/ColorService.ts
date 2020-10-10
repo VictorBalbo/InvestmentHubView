@@ -9,13 +9,12 @@ export class ColorService {
     return hash;
   }
   public static getColor(value: string) {
-    const hash = this.getHashFromString(value)
+    const hash = this.getHashFromString(value);
     let color = '#';
     for (let i = 0; i < 3; i++) {
-        let value = (hash >> (i * 8)) & 255;
-        color += value.toString(16);
+      let value = (hash >> (i * 8)) & 255;
+      color += value.toString(16);
     }
     return color;
-}
-
+  }
 }

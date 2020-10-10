@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Card, Divider, Statistic, Table } from "antd";
-import { Doughnut, Line } from "react-chartjs-2";
-import { ApiService } from "./services/ApiService";
-import { Summary } from "./models/Summary";
-import { ColorService } from "./services/ColorService";
-import { PatrimonyEvolution } from "./models/PatrymonyEvolution";
-import { format } from "date-fns";
-import "./Overview.scss";
-import { InvestmentType } from "./models/InvestmentType";
-import { Investment } from "./models/Investment";
+import React, { useState, useEffect } from 'react';
+import { Card, Divider, Statistic, Table } from 'antd';
+import { Doughnut, Line } from 'react-chartjs-2';
+import { ApiService } from './services/ApiService';
+import {
+  Investment,
+  InvestmentType,
+  PatrimonyEvolution,
+  Summary,
+} from './models';
+import { ColorService } from './services/ColorService';
+import { format } from 'date-fns';
+import './Overview.scss';
 
 export function OverviewComponent() {
   const [myEvolution, setMyEvolution] = useState<PatrimonyEvolution[]>();
@@ -23,7 +25,7 @@ export function OverviewComponent() {
     }
   });
   const patrimonyChart = {
-    labels: myEvolution?.map((p) => format(new Date(p.Date), "dd/MM/yy")),
+    labels: myEvolution?.map((p) => format(new Date(p.Date), 'dd/MM/yy')),
     datasets: [
       {
         data: myEvolution?.map((i) => i.Value),
@@ -80,19 +82,19 @@ export function OverviewComponent() {
 
   const walletTablecolumns = [
     {
-      title: "Type",
-      dataIndex: "type",
-      key: "type",
+      title: 'Type',
+      dataIndex: 'type',
+      key: 'type',
     },
     {
-      title: "Participação",
-      dataIndex: "participacao",
-      key: "participacao",
+      title: 'Participação',
+      dataIndex: 'participacao',
+      key: 'participacao',
     },
     {
-      title: "Valor",
-      dataIndex: "value",
-      key: "value",
+      title: 'Valor',
+      dataIndex: 'value',
+      key: 'value',
     },
   ];
 
@@ -108,28 +110,28 @@ export function OverviewComponent() {
             title="Net Worth"
             value={summary!.TotalValue}
             precision={2}
-            prefix={"R$"}
+            prefix={'R$'}
           />
           <Divider className="Divider" />
           <Statistic
             title="Invested"
             value={summary!.TotalInvestedValue}
             precision={2}
-            prefix={"R$"}
+            prefix={'R$'}
           />
           <Divider className="Divider" />
           <Statistic
             title="Gain in month"
             value={summary!.MonthGain}
             precision={2}
-            prefix={"R$"}
+            prefix={'R$'}
           />
           <Divider className="Divider" />
           <Statistic
             title="Profitability in month"
             value={(summary!.MonthGain / summary!.TotalValue) * 100}
             precision={2}
-            suffix={"%"}
+            suffix={'%'}
           />
         </Card>
 

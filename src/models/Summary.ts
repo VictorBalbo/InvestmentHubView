@@ -1,4 +1,4 @@
-import { Investment } from "./Investment";
+import { Investment } from './Investment';
 
 export interface Summary {
   TotalValue: number;

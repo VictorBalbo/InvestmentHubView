@@ -1,6 +1,6 @@
-import { InvestmentType } from "../models/InvestmentType";
-import { PatrimonyEvolution } from "../models/PatrymonyEvolution";
-import { Summary } from "../models/Summary";
+import { InvestmentType } from '../models/InvestmentType';
+import { PatrimonyEvolution } from '../models/PatrymonyEvolution';
+import { Summary } from '../models/Summary';
 
 export class ApiService {
   /**
@@ -29,8 +29,8 @@ export class ApiService {
       MonthGain: 200,
       Investments: [
         {
-          ProviderName: "Rico",
-          InvestmentName: "XPML11",
+          ProviderName: 'Rico',
+          InvestmentName: 'XPML11',
           Value: 1000,
           Cost: 900,
           Type: InvestmentType.STOCK,
@@ -39,8 +39,8 @@ export class ApiService {
           GeneratesIncome: true,
         },
         {
-          ProviderName: "Rico",
-          InvestmentName: "RBVA11",
+          ProviderName: 'Rico',
+          InvestmentName: 'RBVA11',
           Value: 2000,
           Cost: 1900,
           Type: InvestmentType.STOCK,
@@ -49,8 +49,8 @@ export class ApiService {
           GeneratesIncome: true,
         },
         {
-          ProviderName: "Rico",
-          InvestmentName: "BALANCE",
+          ProviderName: 'Rico',
+          InvestmentName: 'BALANCE',
           Value: 500,
           Cost: 500,
           Type: InvestmentType.BALANCE,
@@ -73,8 +73,8 @@ export class ApiService {
       MonthGain: 200,
       Investments: [
         {
-          ProviderName: "Rico",
-          InvestmentName: "XPML11",
+          ProviderName: 'Rico',
+          InvestmentName: 'XPML11',
           Value: 1000,
           Cost: 900,
           Type: InvestmentType.STOCK,
@@ -83,8 +83,8 @@ export class ApiService {
           GeneratesIncome: true,
         },
         {
-          ProviderName: "Rico",
-          InvestmentName: "RBVA11",
+          ProviderName: 'Rico',
+          InvestmentName: 'RBVA11',
           Value: 2000,
           Cost: 1900,
           Type: InvestmentType.STOCK,
@@ -93,8 +93,8 @@ export class ApiService {
           GeneratesIncome: true,
         },
         {
-          ProviderName: "Rico",
-          InvestmentName: "BALANCE",
+          ProviderName: 'Rico',
+          InvestmentName: 'BALANCE',
           Value: 500,
           Cost: 500,
           Type: InvestmentType.BALANCE,
